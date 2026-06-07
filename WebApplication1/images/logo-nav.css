@@ -1,0 +1,32 @@
+/* === NAV LOGO === */
+.nav-logo-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+}
+
+.nav-logo-img {
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.nav-logo-link:hover .nav-logo-img {
+    transform: rotate(-6deg) scale(1.08) !important;
+}
+
+/* Logo yazısı */
+.logo-text {
+    color: #3e2723 !important;
+    font-weight: 800 !important;
+    font-size: 17px !important;
+    letter-spacing: -0.6px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+

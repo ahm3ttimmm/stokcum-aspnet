@@ -1,0 +1,634 @@
+/* ============================================================
+   STOKCUM.COM — YENİ RENK PALETİ
+   #28467F  Ana Mavi        (primary)
+   #36497A  İkincil Mavi    (secondary)
+   #84F8F9  Cyan Vurgu      (accent)
+   #121723  Koyu Arka Plan  (bg-dark)
+   #150E40  Derin Lacivert  (bg-deeper)
+============================================================ */
+
+/* =================== GLOBAL =================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #0d1220;
+    color: #dce6f5;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin-top: 5px;
+}
+
+/* =================== NAVBAR =================== */
+.solid-navbar {
+    background: linear-gradient(135deg, #150E40 0%, #28467F 100%) !important;
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: clamp(700px, 88vw, 1200px) !important;
+    height: 62px !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 10px 30px rgba(21,14,64,.55), 0 2px 8px rgba(40,70,127,.3) !important;
+    z-index: 9999 !important;
+    border: 1px solid rgba(132,248,249,.18) !important;
+    transition: all .4s cubic-bezier(.4,0,.2,1);
+    overflow: hidden !important;
+    backdrop-filter: blur(16px);
+}
+
+    .solid-navbar:hover {
+        box-shadow: 0 14px 40px rgba(21,14,64,.7) !important;
+        transform: translateX(-50%) translateY(-2px) !important;
+    }
+
+.nav-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    padding: 0 24px !important;
+    gap: 12px !important;
+    flex-wrap: nowrap !important;
+}
+
+/* Logo */
+.nav-logo-link {
+    display: flex !important;
+    align-items: center !important;
+    gap: 9px !important;
+    text-decoration: none !important;
+    flex-shrink: 0 !important;
+}
+
+.nav-logo-img {
+    height: 40px !important; width: 40px !important;
+    border-radius: 10px !important; object-fit: cover !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,.4) !important;
+    transition: transform .3s, box-shadow .3s !important;
+}
+
+    .nav-logo-link:hover .nav-logo-img {
+        transform: rotate(-6deg) scale(1.1) !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,.5) !important;
+    }
+
+.logo-text {
+    color: #84F8F9 !important;
+    font-weight: 800 !important;
+    font-size: 17px !important;
+    letter-spacing: -.6px !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+/* Sol Menü */
+.nav-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 2px !important;
+    flex-shrink: 0 !important;
+}
+
+    .nav-left .nav-item {
+        color: rgba(255,255,255,.82) !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-size: 13.5px !important;
+        padding: 7px 14px !important;
+        border-radius: 9999px !important;
+        transition: all .3s ease !important;
+        white-space: nowrap !important;
+    }
+
+        .nav-left .nav-item:hover {
+            background-color: rgba(132,248,249,.14) !important;
+            color: #84F8F9 !important;
+            transform: translateY(-2px) !important;
+        }
+
+/* Sağ */
+.nav-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* Login butonu */
+.log-btn {
+    background-color: #84F8F9 !important;
+    color: #121723 !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+    padding: 9px 22px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    transition: all .3s ease !important;
+}
+
+    .log-btn:hover {
+        background-color: #fff !important;
+        color: #150E40 !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 4px 14px rgba(132,248,249,.45) !important;
+    }
+
+/* Kullanıcı alanı */
+.nav-user-area {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+}
+
+.nav-btn-yonetim,
+.nav-btn-cikis {
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    height: 36px !important;
+    padding: 0 14px !important;
+    border-radius: 9999px !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    transition: all .3s ease !important;
+}
+
+.nav-btn-yonetim {
+    background-color: #28467F !important;
+    color: #84F8F9 !important;
+    border: 1px solid rgba(132,248,249,.28) !important;
+}
+
+    .nav-btn-yonetim:hover {
+        background-color: #84F8F9 !important;
+        color: #121723 !important;
+        border-color: transparent !important;
+        box-shadow: 0 4px 14px rgba(132,248,249,.35) !important;
+    }
+
+.nav-btn-cikis {
+    background: transparent !important;
+    color: rgba(255,255,255,.8) !important;
+    border: 1.6px solid rgba(255,255,255,.35) !important;
+}
+
+    .nav-btn-cikis:hover {
+        background-color: #e53935 !important;
+        color: #fff !important;
+        border-color: transparent !important;
+    }
+
+.user-welcome {
+    color: rgba(255,255,255,.72) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+/* İçerik alanı */
+.content-body {
+    padding-top: 100px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* =================== GİRİŞ / KAYIT FORMU =================== */
+.login-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: calc(100vh - 100px) !important;
+    padding: 20px;
+}
+
+.login-card {
+    background: linear-gradient(145deg, #1a2540, #28467F) !important;
+    width: 100% !important;
+    max-width: 420px !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(132,248,249,.2) !important;
+    box-shadow: 0 20px 50px rgba(21,14,64,.6) !important;
+    padding: 30px !important;
+}
+
+    .login-card h1,
+    .login-card h2,
+    .login-card h3 {
+        color: #84F8F9 !important;
+        font-weight: 700 !important;
+        text-align: center;
+        margin-bottom: 25px !important;
+    }
+
+    .login-card .form-control {
+        background-color: rgba(18,23,35,.75) !important;
+        border: 1px solid rgba(132,248,249,.22) !important;
+        color: #dce6f5 !important;
+        border-radius: 12px !important;
+        padding: 12px 15px !important;
+        font-size: 14px !important;
+        transition: all .25s ease !important;
+    }
+
+        .login-card .form-control:focus {
+            background-color: rgba(18,23,35,.95) !important;
+            color: #dce6f5 !important;
+            border-color: #84F8F9 !important;
+            box-shadow: 0 0 0 3px rgba(132,248,249,.15) !important;
+            outline: none !important;
+        }
+
+        .login-card .form-control::placeholder { color: rgba(132,248,249,.45) !important; }
+
+        .login-card .form-control:-webkit-autofill,
+        .login-card .form-control:-webkit-autofill:hover,
+        .login-card .form-control:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0 1000px #1a2540 inset !important;
+            -webkit-text-fill-color: #dce6f5 !important;
+        }
+
+.btn-login {
+    background-color: #28467F !important;
+    color: #84F8F9 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    display: block !important;
+    width: 100% !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+    transition: all .25s ease !important;
+    border: 1px solid rgba(132,248,249,.28) !important;
+    cursor: pointer !important;
+}
+
+    .btn-login:hover {
+        background-color: #84F8F9 !important;
+        color: #121723 !important;
+        border-color: transparent !important;
+        box-shadow: 0 6px 20px rgba(132,248,249,.35) !important;
+        transform: translateY(-2px) !important;
+    }
+
+/* =================== YENİ ŞİRKET BUTONU =================== */
+button.create, .create, input[type="submit"].create {
+    background-color: #28467F !important;
+    color: #84F8F9 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    display: block !important;
+    width: 44% !important;
+    border: 1px solid rgba(132,248,249,.28) !important;
+    border-radius: 12px !important;
+    padding: 12px 24px !important;
+    margin-top: 20px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    box-shadow: 0 4px 12px rgba(40,70,127,.35) !important;
+    transition: all .3s cubic-bezier(.4,0,.2,1) !important;
+}
+
+    button.create:hover, .create:hover, input[type="submit"].create:hover {
+        background-color: #84F8F9 !important;
+        color: #121723 !important;
+        border-color: transparent !important;
+        box-shadow: 0 6px 20px rgba(132,248,249,.35) !important;
+        transform: translateY(-2px) !important;
+    }
+
+/* =================== ŞİRKET FORMU =================== */
+.sirket-groupbox {
+    border: 1px solid rgba(132,248,249,.2);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #1a2540, #28467F);
+    padding: 28px 35px;
+    margin: 30px auto;
+    max-width: 480px;
+    box-shadow: 0 8px 25px rgba(21,14,64,.45);
+}
+
+    .sirket-groupbox legend {
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: #84F8F9;
+        padding: 0 18px;
+        background: transparent;
+        text-align: center;
+    }
+
+.groupbox-content { display: flex; flex-direction: column; gap: 18px; }
+
+/* =================== FORM KONTROLLER (GLOBAL) =================== */
+.form-control,
+.form-select {
+    background-color: rgba(18,23,35,.65) !important;
+    border: 1px solid rgba(132,248,249,.2) !important;
+    color: #dce6f5 !important;
+    border-radius: 12px !important;
+    padding: 12px 14px !important;
+    font-size: 15px !important;
+    transition: all .25s ease;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #84F8F9 !important;
+        box-shadow: 0 0 0 3px rgba(132,248,249,.15) !important;
+        background-color: rgba(18,23,35,.9) !important;
+        color: #dce6f5 !important;
+        outline: none;
+    }
+
+    .form-control::placeholder { color: rgba(132,248,249,.38) !important; }
+
+.form-label {
+    color: #84F8F9 !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+    display: block;
+}
+
+/* =================== GRIDVIEW =================== */
+#GridView1, .table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 25px !important;
+    background-color: #141c30 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(21,14,64,.45) !important;
+}
+
+    #GridView1 th, .table thead th {
+        background: linear-gradient(135deg, #150E40, #28467F) !important;
+        color: #84F8F9 !important;
+        padding: 14px 10px !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        border-bottom: 2px solid rgba(132,248,249,.18) !important;
+        font-size: 15px !important;
+    }
+
+    #GridView1 td, .table tbody td {
+        padding: 12px 10px !important;
+        border-bottom: 1px solid rgba(54,73,122,.28) !important;
+        color: #c8d8f0 !important;
+        font-size: 14.5px !important;
+    }
+
+    #GridView1 tr:nth-child(even), .table tbody tr:nth-child(even) {
+        background-color: rgba(54,73,122,.18) !important;
+    }
+
+    #GridView1 tr:hover, .table tbody tr:hover {
+        background-color: rgba(132,248,249,.07) !important;
+        transition: all .2s ease;
+    }
+
+    #GridView1 .pager td, #GridView1 .pager a {
+        padding: 10px 14px !important;
+        color: #84F8F9 !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+    }
+
+        #GridView1 .pager a:hover {
+            background-color: #28467F !important;
+            border-radius: 6px !important;
+        }
+
+@media (max-width: 768px) {
+    #GridView1, .table { font-size: 13.5px !important; }
+    #GridView1 th, #GridView1 td { padding: 10px 6px !important; }
+}
+
+/* =================== CONTACT SAYFASI =================== */
+.section-title {
+    color: #84F8F9;
+    border-bottom: 2px solid rgba(132,248,249,.35);
+    padding-bottom: 10px;
+}
+
+.comment-card { border-left: 4px solid #28467F; box-shadow: 0 2px 8px rgba(0,0,0,.2); }
+.comment-author { color: #84F8F9; margin-bottom: 8px; }
+.comment-text   { font-size: 1.05rem; line-height: 1.6; color: #c8d8f0; }
+
+.contact-form-card {
+    box-shadow: 0 4px 15px rgba(21,14,64,.5);
+    border: 1px solid rgba(132,248,249,.15) !important;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .contact-form-card .card-header {
+        background: linear-gradient(135deg, #150E40, #28467F);
+        color: #84F8F9;
+        padding: 15px 20px;
+    }
+
+.btn-success {
+    background-color: #28467F !important;
+    border-color: #28467F !important;
+    color: #84F8F9 !important;
+}
+
+    .btn-success:hover {
+        background-color: #84F8F9 !important;
+        border-color: transparent !important;
+        color: #121723 !important;
+    }
+
+/* =================== ADMİN PANELİ =================== */
+.admin-header {
+    background: linear-gradient(135deg, #150E40, #28467F);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(21,14,64,.5);
+    margin-bottom: 25px;
+    border: 1px solid rgba(132,248,249,.15);
+}
+
+    .admin-header h3 { margin: 0; font-weight: 700; color: #84F8F9; }
+
+.admin-dropdown {
+    max-width: 420px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    background-color: #1a2540 !important;
+    color: #84F8F9 !important;
+    border: 1px solid rgba(132,248,249,.25) !important;
+}
+
+.admin-grid {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(21,14,64,.5);
+}
+
+    .admin-grid thead th {
+        background: linear-gradient(135deg, #150E40, #28467F) !important;
+        color: #84F8F9 !important;
+        font-weight: 600;
+        padding: 14px 10px;
+        text-align: center;
+    }
+
+    .admin-grid tbody tr:hover {
+        background-color: rgba(132,248,249,.06) !important;
+        transition: all .3s ease;
+    }
+
+    .admin-grid .btn { border-radius: 6px; font-size: .9rem; }
+
+input[type="checkbox"] { width: 18px; height: 18px; }
+
+/* =================== HAKKIMIZDA =================== */
+.about-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity .5s ease-in-out;
+}
+
+.progress-bar-custom {
+    height: 4px;
+    background-color: rgba(132,248,249,.18);
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #84F8F9;
+    width: 0%;
+    transition: width 30s linear;
+}
+
+/* =================== ABONELİK =================== */
+.plan-card {
+    transition: all .3s;
+    height: 100%;
+    background-color: #1a2540 !important;
+    border: 1px solid rgba(132,248,249,.15) !important;
+    color: #dce6f5 !important;
+    border-radius: 14px !important;
+}
+
+    .plan-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 32px rgba(21,14,64,.65) !important;
+        border-color: rgba(132,248,249,.4) !important;
+    }
+
+.popular {
+    border: 2px solid #84F8F9 !important;
+    position: relative;
+}
+
+    .popular::after {
+        content: "Popüler";
+        position: absolute;
+        top: -12px; right: 20px;
+        background: #84F8F9;
+        color: #121723;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: .9rem;
+        font-weight: 700;
+    }
+
+/* =================== DASHBOARD KARTLARI (Default.aspx) =================== */
+.card-sirket  { background: linear-gradient(135deg, #150E40, #28467F) !important; }
+.card-urun    { background: linear-gradient(135deg, #0d3b6e, #36497A) !important; }
+.card-kritik  { background: linear-gradient(135deg, #4a0a0a, #9b1c1c) !important; }
+.card-deger   { background: linear-gradient(135deg, #064e3b, #065f46) !important; }
+
+/* Hoş geldin kutusu */
+.hosgeldin-box {
+    background: linear-gradient(135deg, #150E40 0%, #28467F 100%) !important;
+    border: 1px solid rgba(132,248,249,.2);
+}
+
+/* =================== BOOTSTRAP KARANLIK TEMA OVERRIDE =================== */
+/* Bootstrap'in varsayılan koyu metinleri karanlık arka planda görünmez — düzelt */
+
+.text-dark                    { color: #e2eaf8 !important; }
+.text-muted                   { color: #8da4d0 !important; }
+.text-secondary               { color: #8da4d0 !important; }
+.text-body                    { color: #dce6f5 !important; }
+.text-black                   { color: #e2eaf8 !important; }
+
+/* Başlıklar */
+h1, h2, h3, h4, h5, h6        { color: #e2eaf8; }
+
+/* Paragraf ve genel metin */
+p, li, span, label, td, th    { color: inherit; }
+
+/* Bootstrap card (varsayılan beyaz kart) → koyu temaya al */
+.card:not(.login-card):not(.stat-card):not(.plan-card) {
+    background-color: #1a2035 !important;
+    border-color: rgba(132,248,249,.15) !important;
+    color: #dce6f5 !important;
+}
+.card-body   { color: #dce6f5 !important; }
+.card-header { background-color: rgba(21,14,64,.5) !important;
+               color: #84F8F9 !important;
+               border-color: rgba(132,248,249,.15) !important; }
+.card-footer { background-color: rgba(21,14,64,.3) !important;
+               border-color: rgba(132,248,249,.15) !important;
+               color: #8da4d0 !important; }
+
+/* Beyaz/açık arka planlı kartlar — bunlarda koyu metin kalsın */
+.bg-white     { background-color: #fff !important; color: #1e2a3a !important; }
+.bg-light     { background-color: #f0f4ff !important; color: #1e2a3a !important; }
+.bg-white *,
+.bg-light *   { color: #1e2a3a; }
+/* ama içindeki özel renkli başlıklar geçersiz kılmasın: */
+.bg-white .text-primary  { color: #0d6efd !important; }
+.bg-white .text-success  { color: #198754 !important; }
+.bg-white .text-warning  { color: #ffc107 !important; }
+.bg-white .text-danger   { color: #dc3545 !important; }
+.bg-white .text-info     { color: #0dcaf0 !important; }
+.bg-white .text-muted    { color: #6c757d !important; }
+
+/* Bootstrap accordion (Contact SSS) */
+.accordion-button::after { filter: invert(1) brightness(2); }
+
+/* Bootstrap alert */
+.alert-success-custom { color: #84F8F9 !important; }
+
+/* Bootstrap small / lead */
+small, .small { color: #8da4d0; }
+.lead         { color: #c8d8f0; }
+
+/* Bootstrap outline buton karanlık temada */
+.btn-outline-secondary {
+    color: #84F8F9 !important;
+    border-color: rgba(132,248,249,.4) !important;
+}
+.btn-outline-secondary:hover {
+    background-color: rgba(132,248,249,.15) !important;
+    color: #84F8F9 !important;
+}
+.btn-outline-danger { color: #ff8a8a !important; border-color: #ff8a8a !important; }
+.btn-outline-danger:hover { background-color: rgba(255,70,70,.15) !important; }
+
+/* Bootstrap link */
+a:not(.btn):not(.nav-item):not(.nav-logo-link):not(.log-btn) {
+    color: #84F8F9;
+    text-decoration: none;
+}
+a:not(.btn):not(.nav-item):not(.nav-logo-link):not(.log-btn):hover {
+    color: #fff;
+    text-decoration: underline;
+}

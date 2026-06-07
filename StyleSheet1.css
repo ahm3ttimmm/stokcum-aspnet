@@ -1,0 +1,640 @@
+﻿/* === ÖNCEKİ TÜM CSS'İ SİL VE BUNU YAPISTIR === */
+
+/* --- GENEL AYARLAR --- */
+* {
+    margin: 0; /* 5px → 0 */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin-top: 5px; /* İstediğin 5px'i sadece body'e taşı */
+}
+
+/* ===================== NAVBAR ===================== */
+.solid-navbar {
+    background-color: burlywood !important;
+    backdrop-filter: blur(16px);
+    position: fixed !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: clamp(560px, 74vw, 1020px) !important;
+    height: 62px !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 10px 30px rgba(62, 39, 35, 0.15), 0 2px 8px rgba(62, 39, 35, 0.08) !important;
+    z-index: 9999 !important;
+    border: 1px solid rgba(62, 39, 35, 0.1) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+    .solid-navbar:hover {
+        box-shadow: 0 14px 40px rgba(62, 39, 35, 0.20) !important;
+        transform: translateX(-50%) translateY(-2px) !important;
+    }
+
+/* İçerik */
+.nav-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100% !important;
+    padding: 0 32px !important;
+    gap: 24px !important;
+}
+
+/* Logo */
+.logo-text {
+    color: #3e2723 !important;
+    font-weight: 800 !important;
+    font-size: 19px !important;
+    letter-spacing: -0.6px !important;
+    white-space: nowrap !important;
+}
+
+/* Sol Menü */
+.nav-left {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+}
+
+    .nav-left .nav-item {
+        color: #3e2723 !important;
+        text-decoration: none !important;
+        font-weight: 600 !important;
+        font-size: 14.8px !important;
+        padding: 8px 20px !important;
+        border-radius: 9999px !important;
+        transition: all 0.35s ease !important;
+    }
+
+        .nav-left .nav-item:hover {
+            background-color: #3e2723 !important;
+            color: #f5ebdc !important;
+            transform: translateY(-2px) !important;
+        }
+
+/* Sağ Taraf */
+.nav-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+/* Login Butonu */
+.log-btn {
+    background-color: #3e2723 !important;
+    color: #f5ebdc !important;
+    font-weight: 700 !important;
+    font-size: 14.8px !important;
+    padding: 11px 28px !important;
+    border-radius: 9999px !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+}
+
+    .log-btn:hover {
+        background-color: #f5ebdc !important;
+        color: #3e2723 !important;
+        transform: translateY(-3px) !important;
+    }
+
+/* Kullanıcı Paneli */
+.nav-btn-yonetim,
+.nav-btn-cikis {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    height: 38px !important;
+    padding: 0 20px !important;
+    border-radius: 9999px !important;
+    white-space: nowrap !important;
+}
+
+.nav-btn-yonetim {
+    background-color: #3e2723 !important;
+    color: #f5ebdc !important;
+}
+
+    .nav-btn-yonetim:hover {
+        background-color: #f5ebdc !important;
+        color: #3e2723 !important;
+    }
+
+.nav-btn-cikis {
+    background: transparent !important;
+    color: #3e2723 !important;
+    border: 1.6px solid #3e2723 !important;
+}
+
+    .nav-btn-cikis:hover {
+        background-color: #d32f2f !important;
+        color: white !important;
+        border-color: #d32f2f !important;
+    }
+
+.user-welcome {
+    color: #5c4033 !important;
+    font-size: 14.2px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+}
+
+/* İçerik Alanı */
+.content-body {
+    padding-top: 100px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* --- GİRİŞ FORMU TASARIMI VE ORTALAMA (log.aspx) --- */
+/* --- GİRİŞ FORMU KART AYARLARI (log.aspx) --- */
+
+/* Giriş kartının ekranın tam ortasında durmasını sağlayan ana taşıyıcı */
+.login-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: calc(100vh - 100px) !important;
+    padding: 20px;
+}
+
+/* Giriş Kartının Kendisi */
+.login-card {
+    background-color: #deb887 !important; /* Burlywood */
+    width: 100% !important;
+    max-width: 420px !important;
+    border-radius: 24px !important;
+    border: none !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+    padding: 30px !important;
+}
+
+    /* Giriş Başlığı */
+    .login-card h2, .login-card h3 {
+        color: #3e2723 !important;
+        font-weight: 700 !important;
+        text-align: center;
+        margin-bottom: 25px !important;
+    }
+
+    /* --- İNPUT GİRİŞ KUTULARI VE YENİ PLACEHOLDER AYARLARI --- */
+    .login-card .form-control {
+        background-color: antiquewhite !important;
+        border: 1px solid #deb887 !important;
+        color: #3e2723 !important;
+        border-radius: 12px !important;
+        padding: 12px 15px !important; /* İç boşluğu biraz artırdık yazı rahatlasın */
+        font-size: 14px !important;
+        transition: all 0.25s ease !important;
+        position: relative;
+    top: 1px;
+    left: -1px;
+}
+
+        /* Tıklanınca (Focus) Oluşan Çirkin Mavi/Beyaz Çerçeveleri Yok Etme */
+        .login-card .form-control:focus {
+            background-color: antiquewhite !important;
+            color: #3e2723 !important;
+            outline: none !important;
+            border-color: #3e2723 !important;
+            box-shadow: 0 0 0 3px rgba(62, 39, 35, 0.15) !important;
+        }
+
+        /* 🔥 YENİ: Kutuların İçindeki Placeholder Yazı Rengini Koyu Kahve Yapma */
+        .login-card .form-control::placeholder {
+            color: #3e2723 !important;
+            opacity: 0.6; /* Hafif silik dursun ki şık dursun */
+        }
+
+        /* Edge, Chrome ve Safari için Autofill (Otomatik Doldurma) Beyazlık Engelleyici */
+        .login-card .form-control:-webkit-autofill,
+        .login-card .form-control:-webkit-autofill:hover,
+        .login-card .form-control:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0 1000px antiquewhite inset !important;
+            -webkit-text-fill-color: #3e2723 !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+
+/* Giriş Butonu (Login) */
+.btn-login {
+    background-color: #3e2723 !important;
+    color: antiquewhite !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    display: block !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    margin-top: 20px !important;
+    transition: all 0.25s ease !important;
+    border-left-style: none !important;
+    border-left-color: inherit !important;
+    border-left-width: medium;
+    border-right-style: none !important;
+    border-right-color: inherit !important;
+    border-right-width: medium;
+    border-top-style: none !important;
+    border-top-color: inherit !important;
+    border-top-width: medium;
+    border-bottom-style: none !important;
+    border-bottom-color: inherit !important;
+    border-bottom-width: medium;
+}
+
+    .btn-login:hover {
+        background-color: antiquewhite !important;
+        color: #3e2723 !important;
+        outline: 1px solid #3e2723 !important;
+        box-shadow: 0 4px 12px rgba(62, 39, 35, 0.2) !important;
+    }
+
+/* Telif Yazısı */
+.login-card .card-footer, .footer-text {
+    background: none !important;
+    border: none !important;
+    color: #3e2723 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin-top: 25px !important;
+    opacity: 0.8;
+}
+
+
+/* --- .create SIFATLI ŞİRKET OLUŞTURMA BUTONU --- */
+button.create,
+.create,
+input[type="submit"].create {
+    background-color: #5d4037 !important; /* Temaya uygun sıcak bir koyu kakao/kahve tonu */
+    color: #f5ebdc !important; /* Fildişi / Krem yazı */
+    font-size: 15px !important;
+    font-weight: 700 !important; /* Yazıyı biraz daha kalınlaştırdık */
+    display: block !important;
+    width: 44% !important;
+    border: 2px solid #3e2723 !important; /* Belirgin şık bir çerçeve */
+    border-radius: 12px !important; /* Form kutularının kavisleriyle (12px) tam uyum */
+    padding: 12px 24px !important;
+    margin-top: 20px !important;
+    cursor: pointer !important;
+    text-align: center !important;
+    box-shadow: 0 4px 12px rgba(62, 39, 35, 0.1) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+    /* Şirket Oluştur Butonunun Üzerine Gelindiğinde (Hover) */
+    button.create:hover,
+    .create:hover,
+    input[type="submit"].create:hover {
+        background-color: burlywood !important; /* 🔥 Sürpriz: Üzerine gelince temayı bozmayan tatlı bir başarı yeşili */
+        color: #ffffff !important; /* Yazı tam beyaz oluyor */
+        border-color: #1b5e20 !important; /* Çerçeve koyu yeşil */
+        box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3) !important; /* Yeşil estetik gölge */
+        transform: translateY(-2px) !important; /* Hafif yukarı esneme */
+    }
+
+
+/* ====================== KÜÇÜK & MİNİMALİST ŞİRKET FORMU ====================== */
+
+.sirket-groupbox {
+    border: 2px solid #3e2723;
+    border-radius: 20px;
+    background-color: #deb887;
+    padding: 28px 35px;
+    margin: 30px auto;
+    max-width: 480px;
+    box-shadow: 0 8px 25px rgba(62, 39, 35, 0.18);
+}
+
+    .sirket-groupbox legend {
+        font-size: 1.45rem;
+        font-weight: 700;
+        color: #3e2723;
+        padding: 0 18px;
+        background-color: #deb887;
+        text-align: center;
+    }
+
+/* İçerik */
+.groupbox-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Input ve Dropdown Stil */
+.form-control,
+.form-select {
+    background-color: antiquewhite !important;
+    border: 1px solid #d2b48c !important;
+    color: #3e2723 !important;
+    border-radius: 12px !important;
+    padding: 12px 14px !important;
+    font-size: 15px !important;
+    transition: all 0.25s ease;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #3e2723 !important;
+        box-shadow: 0 0 0 3px rgba(62, 39, 35, 0.15) !important;
+        outline: none;
+    }
+
+    .form-control::placeholder {
+        color: #3e2723 !important;
+        opacity: 0.65;
+    }
+
+/* Etiketler */
+.form-label {
+    color: #3e2723 !important;
+    font-weight: 600 !important;
+    margin-bottom: 6px !important;
+    display: block;
+}
+
+/* Takvim */
+#<%= upCalendar.ClientID % > {
+    display: flex;
+    justify-content: center;
+}
+
+/* Butonlar */
+.btn-login {
+    background-color: #3e2723 !important;
+    color: antiquewhite !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 13px !important;
+    border-radius: 50px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+    .btn-login:hover {
+        background-color: antiquewhite !important;
+        color: #3e2723 !important;
+        transform: translateY(-2px);
+    }
+
+/* Kapat Butonu */
+button[onclick*="display='none'"] {
+    background-color: #6c757d !important;
+    color: white !important;
+    border: none;
+    padding: 11px !important;
+    border-radius: 50px !important;
+    font-size: 15px !important;
+    margin-top: 8px !important;
+}
+
+/* Panel Konumlandırma (Ortada ve Küçük) */
+#<%= pnlSirketForm.ClientID % > {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 1100 !important;
+    width: 100% !important;
+    max-width: 500px !important;
+    background: transparent !important;
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .sirket-groupbox {
+        padding: 22px 25px;
+        margin: 15px;
+    }
+
+    #<%= pnlSirketForm.ClientID % > {
+        padding: 10px;
+    }
+}
+
+
+/* ====================== GRIDVIEW / DATAGRID CSS ====================== */
+
+#GridView1, .table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-top: 25px !important;
+    background-color: #f8f1e9 !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(62, 39, 35, 0.15) !important;
+}
+
+    /* Header (Başlık Satırı) */
+    #GridView1 th,
+    .table thead th {
+        background-color: #3e2723 !important;
+        color: #f5ebdc !important;
+        padding: 14px 10px !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        border-bottom: 3px solid #deb887 !important;
+        font-size: 15px !important;
+    }
+
+    /* Satırlar */
+    #GridView1 td,
+    .table tbody td {
+        padding: 12px 10px !important;
+        border-bottom: 1px solid #d2b48c !important;
+        color: #3e2723 !important;
+        font-size: 14.5px !important;
+    }
+
+    /* Tek Satır ve Çift Satır Renkleri (Zebra) */
+    #GridView1 tr:nth-child(even),
+    .table tbody tr:nth-child(even) {
+        background-color: #f0e6d8 !important;
+    }
+
+    #GridView1 tr:hover,
+    .table tbody tr:hover {
+        background-color: #e8d9c0 !important;
+        transition: all 0.25s ease;
+    }
+
+    /* Pager (Sayfalama) */
+    #GridView1 .pager td,
+    #GridView1 .pager a {
+        padding: 10px 14px !important;
+        color: #3e2723 !important;
+        font-weight: 600 !important;
+        text-decoration: none !important;
+    }
+
+        #GridView1 .pager a:hover {
+            background-color: #3e2723 !important;
+            color: #f5ebdc !important;
+            border-radius: 6px !important;
+        }
+
+    /* Alternatif stiller (istersen aktif hale getir) */
+    #GridView1 tr.selected {
+        background-color: #deb887 !important;
+        font-weight: 600;
+    }
+
+/* Responsive - Mobilde taşmasın */
+@media (max-width: 768px) {
+    #GridView1, .table {
+        font-size: 13.5px !important;
+    }
+
+        #GridView1 th,
+        #GridView1 td {
+            padding: 10px 6px !important;
+        }
+}
+
+
+/* ====================== Contact Page Styles ====================== */
+
+.section-title {
+    color: #3e2723;
+    border-bottom: 2px solid #3e2723;
+    padding-bottom: 10px;
+}
+
+.comment-card {
+    border-left: 4px solid #3e2723;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.comment-author {
+    color: #3e2723;
+    margin-bottom: 8px;
+}
+
+.comment-text {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.contact-form-card {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .contact-form-card .card-header {
+        background-color: #3e2723;
+        color: white;
+        padding: 15px 20px;
+    }
+
+        .contact-form-card .card-header h4 {
+            margin: 0;
+        }
+
+/* Buton ve form iyileştirmeleri */
+.btn-success {
+    background-color: #3e2723;
+    border-color: #3e2723;
+}
+
+    .btn-success:hover {
+        background-color: #2c1f1a;
+        border-color: #2c1f1a;
+    }
+
+
+/* ====================== Admin Panel CSS ====================== */
+
+.admin-header {
+    background: linear-gradient(135deg, #3e2723, #5d4037);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+}
+
+    .admin-header h3 {
+        margin: 0;
+        font-weight: 600;
+    }
+
+.section-title {
+    color: #3e2723;
+    border-bottom: 3px solid #3e2723;
+    padding-bottom: 10px;
+    margin: 25px 0 20px 0;
+}
+
+.admin-dropdown {
+    max-width: 420px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1.05rem;
+}
+
+/* Grid Stil */
+.admin-grid {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+    .admin-grid thead th {
+        background-color: #3e2723 !important;
+        color: white !important;
+        font-weight: 600;
+        text-align: center;
+        padding: 14px 10px;
+    }
+
+    .admin-grid tbody tr:hover {
+        background-color: #f8e9df;
+        transition: all 0.3s ease;
+    }
+
+    .admin-grid .btn {
+        border-radius: 6px;
+        font-size: 0.9rem;
+    }
+
+/* Onay Checkbox için */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.about-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+}
+/* Geçişlerde yumuşak bir kaybolma efekti için */
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.progress-bar-custom {
+    height: 4px;
+    background-color: #e9ecef;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #0d6efd;
+    width: 0%;
+    transition: width 30s linear; /* 30 saniye boyunca düzgünce dolar */
+}

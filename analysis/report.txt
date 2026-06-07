@@ -1,0 +1,45 @@
+Genel Kod Analizi - Özet (WebApplication1)
+
+1) Proje tipi: ASP.NET Web Forms (.NET Framework 4.7.2)
+2) Ana dosyalar: Default.aspx, log.aspx, memberpanel.aspx, Yonetim.aspx, Site1.Master
+3) Veritabanı: LocalDB .mdf (App_Data/Database1.mdf)
+
+Tespit Edilen Sorunlar (Önceliklendirilmiş)
+
+Kritik
+- Parolalar düz metin olarak saklanıyor ve SqlDataSource ile karşılaştırılıyor (log.aspx) -> Güvenlik açığı.
+- SqlDataSource kullanımı ile dinamik SQL riskleri ve kontrolsüz parametreler.
+- Web.config içinde SmtpPassword ve hassas veriler düz metin.
+- Oturum yönetimi: Session değerleri doğrudan gösteriliyor (XSS riski) e.g. Session["ad"] doğrudan HTML içine yazılıyor.
+
+Yüksek
+- Sql bağlantıları ve komutlarında yeterli validasyon yok; sayı/döviz dönüşümlerinde hataya açık.
+- MultiView index out-of-range hatası (memberpanel) — index kontrolü yoktu, düzeltildi.
+
+Orta
+- UI içinde Response.Write ile inline HTML ve script kullanımı bakım ve güvenlik açısından riskli.
+- Input validasyonu kısmi; server-side validatörler daha yaygın kullanılmalı.
+
+Düşük
+- Kod tekrarı (Response.Write ile modal popup), temizlenebilir.
+- SQLDataSource parametre tipleri bazı yerlerde uyumsuz görünüyor (ör. txtMiktar Text -> Decimal).
+
+Önerilen Düzeltmeler (Kısa vadeli)
+- Parola saklama: kayıt ve giriş akışını güncelle, hash (PBKDF2/BCrypt) ile sakla.
+- SqlDataSource yerine parametrik ADO.NET veya ORM (Dapper/Entity Framework) kullan.
+- Web.config içindeki hassas bilgileri dışarı taşı (appSettings yerine secret store / .env sırasında açıklama).
+- Input sanitizasyonu ve sunucu tarafı validasyon ekle.
+- MultiView index kontrolü uygulandı.
+
+Orta vadeli
+- Authentication/Authorization yapısını modernize et (FormsAuth -> OWIN/Identity veya JWT servis).
+- Repository/Service pattern ile kodu ayır.
+- Error handling ve logging (NLog/Serilog) ekle.
+
+Uzun vadeli
+- Abonelik modülü tasarımı: subscription_plans, user_subscriptions, payments tabloları, webhook/ödemeci entegrasyonu.
+- Migration altyapısı (EF Migrations veya SQL scripts).
+
+Sonraki Adım
+- Kullanıcının onayına göre kritik düzeltmeler uygulanacak: parola hashing, giriş akışı güvenliği, hassas verilerin gizlenmesi.
+
